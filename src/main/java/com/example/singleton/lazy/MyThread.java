@@ -6,6 +6,7 @@ public class MyThread implements Runnable{
     public void run() {
 
 //        System.out.println(Thread.currentThread().getName() + ":" +  LazySingleton.getInstance());
-        System.out.println(Thread.currentThread().getName() + ":" +  LazyDCLSingleton.getInstance());
+//        System.out.println(Thread.currentThread().getName() + ":" +  LazyDCLSingleton.getInstance());
+        System.out.println(Thread.currentThread().getName() + ":" +  LazyInnerClassSingleton.getInstance());
     }
 }

@@ -6,6 +6,6 @@ public class MyThread implements Runnable{
     public void run() {
 
         //System.out.println(Thread.currentThread().getName() + ":" +  HungrySingleton.getInstance());
-        System.out.println(Thread.currentThread().getName() + ":" +  HungryStaticMethodSingleton.getInstance());
+        System.out.println(Thread.currentThread().getName() + ":" +  HungryStaticBlockSingleton.getInstance());
     }
 }
