@@ -1,4 +1,4 @@
-package com.example.prototype;
+package com.example.prototype.string;
 
 public class Pets implements Cloneable{
     private String petName;
@@ -22,13 +22,13 @@ public class Pets implements Cloneable{
         return null;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Pets{" +
-//                "petName='" + petName + '\'' +
-//                ", age=" + age +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Pets{" +
+                "petName='" + petName + '\'' +
+                ", age=" + age +
+                '}';
+    }
 
     public String getPetName() {
         return petName;

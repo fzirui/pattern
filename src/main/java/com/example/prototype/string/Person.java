@@ -1,45 +1,45 @@
-package com.example.prototype;
+package com.example.prototype.string;
 
 
 public class Person implements Cloneable{
-    private String name;
+    private StringBuilder name;
     private int age;
     private Pets pets;
 
     @Override
     public Object clone(){
         try {
-            return super.clone();
+            Person person = (Person) super.clone();
+            person.pets = (Pets) pets.clone();
+            return person;
         }catch (CloneNotSupportedException  e){
             e.printStackTrace();
         }
         return null;
     }
 
-    public Person() {
+    public Person() {}
 
-    }
-
-    public Person(String name, int age, Pets pets) {
+    public Person(StringBuilder name, int age, Pets pets) {
         this.name = name;
         this.age = age;
         this.pets = pets;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Person{" +
-//                "name='" + name + '\'' +
-//                ", age=" + age +
-//                ", pets=" + pets +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", pets=" + pets +
+                '}';
+    }
 
-    public String getName() {
+    public StringBuilder getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(StringBuilder name) {
         this.name = name;
     }
 
